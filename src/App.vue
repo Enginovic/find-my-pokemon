@@ -3,7 +3,7 @@
 		<v-main>
 			<v-container>
 				<router-link to="/">Home</router-link> |
-				<router-link to="/about">About</router-link>
+				<router-link to="/pokemon-list">All Pokemons</router-link>
 				<router-view />
 			</v-container>
 		</v-main>
