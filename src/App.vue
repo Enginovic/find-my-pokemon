@@ -9,7 +9,15 @@
 					</v-col>
 				</v-row>
 			</v-container>
-			<router-view />
+			<v-container>
+				<router-view />
+			</v-container>
 		</v-main>
 	</v-app>
 </template>
+
+<style lang="scss">
+.container {
+	max-width: 1000px !important;
+}
+</style>
