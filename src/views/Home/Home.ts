@@ -11,12 +11,14 @@ import router from "@/router";
 export default class Home extends Vue {
   protected allPokemon: Pokemon[] = [];
   protected pokemonResult: Pokemon[] = [];
+  protected popularPokemon: Pokemon[] = [];
   protected searchPokemon = null;
   protected selectedPokemon = null;
   protected loading = false;
 
   mounted() {
     this.fetchAllPokemon();
+    this.fetchPopularPokemon();
   }
 
   /**
@@ -29,6 +31,19 @@ export default class Home extends Vue {
     } catch(error) {
       console.log('error', error);
     }
+  }
+
+  protected fetchPopularPokemon() {
+    const popularIds: number[] = [3, 12, 54, 143];
+
+    popularIds.forEach(async (id: number) => {
+      try {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        this.popularPokemon.push(await response.data);
+      } catch(error) {
+        console.log('error', error);
+      }
+    });
   }
 
   /**
