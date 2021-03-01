@@ -10,14 +10,14 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "home" */ '../views/Home/Home.vue')
   },
   {
-    path: '/pokemon-list',
-    name: 'PokemonList',
-    component: () => import(/* webpackChunkName: "pokemonList" */ '../views/PokemonList/PokemonList.vue')
+    path: '/compare-pokemon',
+    name: 'ComparePokemon',
+    component: () => import(/* webpackChunkName: "comparePokemon" */ '../views/ComparePokemon/ComparePokemon.vue')
   },
   {
     path: '/pokemon/:id',
     name: 'Pokemon',
-    component: () => import(/* webpackChunkName: "pokemon" */ '../views/Pokemons/Pokemon/Pokemon.vue'),
+    component: () => import(/* webpackChunkName: "pokemon" */ '../views/Pokemon/Pokemon.vue'),
   }
 ]
 

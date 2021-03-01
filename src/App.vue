@@ -2,10 +2,14 @@
 	<v-app>
 		<v-main>
 			<v-container>
-				<router-link to="/">Home</router-link> |
-				<router-link to="/pokemon-list">All Pokemons</router-link>
-				<router-view />
+				<v-row>
+					<v-col>
+						<router-link to="/">Home</router-link> |
+						<router-link to="/compare-pokemon">Compare Pokemon</router-link>
+					</v-col>
+				</v-row>
 			</v-container>
+			<router-view />
 		</v-main>
 	</v-app>
 </template>
