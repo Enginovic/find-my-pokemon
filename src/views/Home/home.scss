@@ -1,0 +1,31 @@
+.pokemon-sum {
+	cursor: pointer;
+	border: 1px solid grey;
+	margin: 0 12px;
+	border-radius: 3px;
+	transition: 0.1s all ease-in-out;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.pokemon-id {
+	line-height: 4px;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.pokemon-name {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.pokemon-types {
+	background-color: gray;
+	border-radius: 3px;
+	padding: 3px 10px;
+	color: #fff;
+	margin-right: 10px;
+}
