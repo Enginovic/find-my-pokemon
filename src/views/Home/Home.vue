@@ -35,12 +35,9 @@
 				<img :src="pokemon.sprites.front_default" />
 				<div class="pokemon-id">#{{ pokemon.id }}</div>
 				<div class="pokemon-name">{{ pokemon.name }}</div>
-				<v-chip
-					class="pokemon-types mr-2"
-					v-for="type in pokemon.types"
-					:key="type.slot"
-					>{{ type.type.name }}</v-chip
-				>
+				<v-chip class="mr-2" v-for="type in pokemon.types" :key="type.slot">{{
+					type.type.name
+				}}</v-chip>
 			</v-col>
 		</v-row>
 	</div>

@@ -23,6 +23,8 @@ export default class Home extends Vue {
 
   /**
    * Fetch data from first gen pokemon on mounted
+   * NOTE: I've limited it to 151 (1st gen is the best), since the api didn't have a Gen specific list and each Pokemon has to be called seperately if you wanted to show more.
+   * See fetchPopularPokemon method.
    */
   protected async fetchAllPokemon() {
     try {
