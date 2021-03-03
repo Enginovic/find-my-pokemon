@@ -13,34 +13,6 @@
   }
 }
 
-.pokemon-stat {
-  font-size: 14px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 3px;
-  align-items: center;
-  justify-content: center;
-  &--hp {
-    background-color: #FF5959;
-  }
-  &--attack {
-    background-color: #F5AC78;
-  }
-  &--defense {
-    background-color: #FAE078;
-  }
-  &--special-attack {
-    background-color: #9DB7F5;
-  }
-  &--special-defense {
-    background-color: #A7DB8D;
-  }
-  &--speed {
-    background-color: #FA92B2;
-  }
-}
-
 .pokemon-ability {
   &:after {
     content: '|';
