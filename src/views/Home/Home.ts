@@ -35,8 +35,11 @@ export default class Home extends Vue {
     }
   }
 
+  /**
+   * Fetch random Pokemon
+   */
   protected fetchPopularPokemon() {
-    const popularIds: number[] = [3, 12, 54, 143];
+    const popularIds = Array.from({length: 4}, () => Math.floor(Math.random() * 151) + 1);
 
     popularIds.forEach(async (id: number) => {
       try {
@@ -50,7 +53,7 @@ export default class Home extends Vue {
 
   /**
    * Show all pokemon matching the input value
-   * @param value input value
+   * @param value
    */
   protected querySelections(value: string) {
     this.loading = true;
