@@ -4,7 +4,7 @@
 			<v-col>
 				<v-autocomplete
 					v-model="selectedPokemon"
-					:loading="loading"
+					:loading="loadingPokemonList"
 					:items="pokemonResult"
 					:search-input.sync="searchPokemon"
 					cache-items
@@ -26,7 +26,11 @@
 			</v-col>
 		</v-row>
 		<v-row>
+			<v-col v-if="popularPokemon.length !== 4">
+				Catching Pokemon...
+			</v-col>
 			<v-col
+				v-else
 				class="pokemon-sum"
 				v-for="pokemon in popularPokemon"
 				:key="`popular-${pokemon.name}`"
